@@ -1,0 +1,55 @@
+
+
+兼容芯片(软件兼容)：  LM75, TMP75  
+
+The  TMP1075  is  the  most  accurate  and  lowest power 
+replacement  to  the  industry  standard  LM75  and  TMP75  digital  temperature  sensors
+
+software compatibility  with  other  xx75  standard  temperature  sensors  like  TMP75  and  LM75.
+
+========================easy======================================
+
+1. Low power consumption:
+– 2.7-μA Average current
+– 0.37-μA Shutdown current
+
+2. Supply range options from: 1.62 V to 5.5 V
+3. Digital interface: SMBus, I2C
+4.Software compatibility with industry standard LM75 and TMP75
+5. Resolution: 12 Bits
+6.Supports up to 32 I2C addresses  （tmp1075N 是最多占用4个）
+7. ALERT pin function
+
+8.  TMP1075N DRL package is specified over the -40°C to +125°C temperature range
+9. TMP1075N DRL package is Supply Voltage：  1.62 V to 3.6V
+
+10. TMP1075N DRL package is Accuracy：
+    ±1.0°C: –10°C to +60°C
+    ±2.0°C: –40°C to +125°C
+
+
+
+========================ref=======================================
+
+
+0.  Temperature accuracy:
+     。 ±0.25°C (typical) from -55°C to +125°C
+    。±1°C (maximum) from -40 °C to +110°C
+    。 ±2°C (maximum) from -55°C to +125°C
+
+1. Temperature independent of supply
+2. Can coexist in I3C mixed fast mode bus
+3. NIST traceability
+4. SOT563 / DRL (6)(2)  1.20 mm × 1.60 mm  （大小）
+
+
+
+
+
+
+
+
+
+
+
+

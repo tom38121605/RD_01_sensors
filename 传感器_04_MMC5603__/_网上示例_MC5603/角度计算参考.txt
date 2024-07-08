@@ -1,0 +1,53 @@
+ 
+while(1)
+{
+    /*磁场矢量缓存区，单位是高斯 */
+    float mag_raw_data[3] = {0.0};
+    
+    /* Get the MMC5603 data, unit is gauss */
+    /*情况一：读取数据寄存器数据并转换为磁场，磁场=(寄存器数据-偏移量)/灵敏度*/
+    /*情况二：自动切换Auto_SR和SETonly之间的工作模式*/
+    /*(1)SETonly模式：如果X轴或Y轴输出超过10高斯，则切换到置位模式开始测量*/
+    /*(2)Auto_SR模式：如果X轴和Y轴的输出都小于8高斯，则切换到连续模式;*/
+    /*不符合(1)(2)情况则进行定期校准再开始测量(如果校准不成功则进行置位,再开始测量)*/ 
+    MMC5603_GetData(mag_raw_data);    
+
+    /*将数据寄存器转换的16bit磁场量转换为8bit的X/Y/Z三轴磁场数据*/
+
+    magnetic_field_x = (uint8_t)mag_raw_data[0];    //unit is gauss
+    magnetic_field_y = (uint8_t)mag_raw_data[1];    //unit is gauss
+    magnetic_field_z = (uint8_t)mag_raw_data[2];    //unit is gauss
+    
+    /* 采样间隔20ms，采样率50Hz ，1s=1000ms=1000000ns*/
+    Delay_Ms(20);
+
+  //循环打印磁场数据
+
+  char Buffer_X[100]={0};
+  char Buffer_Y[100]={0};
+  char Buffer_Z[100]={0};
+  sprintf(Buffer_X,"%0.3f ",mag_raw_data[0]);    
+  sprintf(Buffer_Y,"%0.3f ",mag_raw_data[1]);    
+  sprintf(Buffer_Z,"%0.3f ",mag_raw_data[2]);                
+  printf("x1: %s gauss.",Buffer_X);
+  printf("y1: %s gauss.",Buffer_Y);
+  printf("z1: %s gauss.",Buffer_Z);
+
+  /*Shenzhen Guangdong
+    Latitude纬度: 22° 32' 43.9" N
+    Longitude经度: 114° 4' 5.9" E
+    MA TSO LUNG
+    Magnetic Declination地磁偏角: -3° 1' 
+    Declination is NEGATIVE (WEST)
+    Inclination: 34° 6' 
+    Magnetic field strength磁场强度: 45442.3 nT=45.4423μT=0.454423Gauss*/    
+
+   //方向角计算：方向角是X轴和Y轴读数的反正切，输出方向角与手机指南针功能对比，测量结果良好       
+  float Curent_Angle=(atan2((double)mag_raw_data[1],(double)mag_raw_data[0]) * (180 / 3.14159265) + 180 + 地磁偏角);
+  char TEST_OK[]={"OK"};
+  char Buffer_Angle[100]={0};
+  sprintf(Buffer_Angle,"%0.2f ",Curent_Angle);
+  printf("Buffer_Angle: %s ",Buffer_Angle);
+  printf("%s",TEST_OK);
+
+}
