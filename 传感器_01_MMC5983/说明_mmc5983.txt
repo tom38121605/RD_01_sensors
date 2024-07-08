@@ -1,0 +1,34 @@
+
+
+===============easy=====================
+
+MMC5983MA:  完全集成的3轴磁传感器。极少外部元件
+M: 工业等级
+A： 封装类型， 符合 RoHS， 无铅
+
+。I2C  digital  output  with 400 KHz, fast mode operation, 
+。10MHz SPI digital output.
+。Max output data rate of 1000Hz
+。带内置SET/RESET功能的消磁
+。片上灵敏度补偿
+。片上温度传感器
+Data_Ready Interrupt
+Low power consumption
+1uA power down curren
+3.0V single low power supply
+ 2.8V to 3.6V VDD  supply 
+ 2.8V to  3.6V VDDIO  supply
+
+450  u A  (typical)  at  3.0  V  with  7  measurements  per second.  
+ 2  measurements  , the current will be 450 * 2 / 7 = 128 uA
+   
+
+
+===============refer=====================
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+
+=======================easy ==============================
+
+。ICM-42605:   是一款6轴MEMS运动跟踪设备, 
+
+
+
+它整合了3轴陀螺仪和3轴加速度计。
+
+。 I2C interface supports speeds up to 1 MHz, 
+。 SPI interface supports speeds up to 24 MHz.     
+。 VDDIO operating range of 1.71 V to 3.6 V.
+。 VDD operating range of 1.71 V to 3.6 V
+。 Gyroscope Noise: 3.8 mdps Hz and   Accelerometer Noise: 70 ug Hz
+。 Low-Noise mode 6-axis current consumption of 0.65 mA 
+。User selectable Gyro Full-scale range (dps):    ± 15.2/31.2/62.5/125/250/500/1000/2000 
+。User selectable Accelerometer Full-scale range (g): ± 2/4/8/16
+ 
+
+。它还具有2K字节FIFO，可以降低串行总线接口上的流量
+
+
+
+======================= refer ==============================
+
+。supports 12.5 MHz I3C
+ 
+。  features a 2 kB FIFO and 2 programmable interrupts with ultra-low-power 
+     wake-on-motion support to minimize system power consumption
+。The ICM-42605 supports the lowest gyro  and  accel sensor noise in this IMU clas
+。has the highest stability against temperature
+。shock (up to 20,000g) or SMT/bend induced offset and immunity against out-of-band vibration induced noise
+。industry-leading features include InvenSense on-chip APEX Motion Processing engine for gesture recognition, 
+。activity classification, and pedometer, along with programmable digital filters, and an embedded temperature sensor.
+。User-programmable digital filters for gyro, accel, and temp sensor 
+
+。APEX Motion Functions: 
+     . Pedometer, Tilt Detection, Tap Detection 
+     . Wake on Motion, Raise to Wake/Sleep, 
+     . Significant Motion Detection
+
+
+
+
+
+
+
+
+
+
