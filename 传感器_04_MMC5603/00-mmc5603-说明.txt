@@ -28,10 +28,15 @@
 。输入输出口支持1.2V
 。符合RoHS标准
 
-
+。The MEMSIC device 7-bit device address is [0110000] where the three LSB’s are pre-programmed into the 
+    MMC5603NJ at factory. A total of 8 different addresses can be preprogrammed into MEMSIC device at factory.   //8个
 
 
 ================参考====================
 
    。Data_ready Interrupt (I3C only)
    。I3C interface available
+   。A master I2C device can operate READ/WRITE controls to 128 devices by device addressing.
+
+
+
